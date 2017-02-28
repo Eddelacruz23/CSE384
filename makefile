@@ -1,6 +1,6 @@
-homework5: homework5.c
-	gcc -o homework5 homework5.c
+Homework5: Homework5.c
+	gcc -o Homework5 Homework5.c
 clean: 
-	rm homework5
+	rm Homework5
 tar: 
-	tar -cvf homework5.tar homework5.c makefile
+	tar -cvf Homework5.tar Homework5.c makefile
