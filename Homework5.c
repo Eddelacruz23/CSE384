@@ -138,12 +138,14 @@ void filecopy(char * name)
 
 	FILE *secondfile;
 	FILE *firstfile;
+	char y;
+
+
 
 	firstfile = fopen(name, "r");
-
 	if(firstfile == NULL) 
 	{
-		printf("ERROR : THIS FILE CANNOT BE FOUND");
+		printf("ERROR : THE ORGIN FILE CANNOT BE FOUND");
 		exit(EXIT_FAILURE);
 	} 
 
@@ -152,19 +154,16 @@ void filecopy(char * name)
 	if(secondfile == NULL)
 	{
 		fclose(firstfile);
-		printf("ERROR : THIS FILE CANNOT BE FOUND");
+		printf("ERROR : THE TARGET FILE CANNOT BE FOUND");
 		exit (EXIT_FAILURE);
 	}
 	
-
-	char firstvariable;
-
 	do{
-	fputc(firstvariable, secondfile);		
-	}while((firstvariable=fgetc(firstfile)) != EOF);
+	fputc(y, secondfile);		
+	}while((y=fgetc(firstfile)) != EOF);
 
 
-	printf("\n WAS EXECUTED CORRECTLY \n"); 
+	printf(" WAS EXECUTED CORRECTLY "); 
 
 	fclose(firstfile);
 	fclose(secondfile);
